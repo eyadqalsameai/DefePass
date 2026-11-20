@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 860" width="1320" height="860">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 800; fill: #f8fafc; }
+      .subtitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 400; fill: #94a3b8; }
+      .badge-txt { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #38bdf8; }
+      .card-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15.5px; font-weight: 700; }
+      .card-subtitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-weight: 400; fill: #94a3b8; }
+      .item-txt { font-family: 'Consolas', 'Segoe UI', monospace; font-size: 11.5px; fill: #cbd5e1; }
+      .bold-txt { font-weight: 700; fill: #f1f5f9; }
+      .tag-txt { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 700; }
+      .arrow { stroke-width: 2; fill: none; stroke-dasharray: 4,4; }
+    </style>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#fb923c" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#c084fc" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#34d399" />
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06b6d4" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1320" height="860" class="bg" />
+
+  <!-- Header Banner -->
+  <g transform="translate(60, 30)">
+    <rect x="0" y="0" width="1200" height="82" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+    <text x="30" y="34" class="title">DefePass — Architecture &amp; Execution Dataflow</text>
+    <text x="30" y="58" class="subtitle">Cross-Platform Defensive Password Policy Enforcement &amp; Auditing Framework</text>
+    
+    <!-- Top Badges -->
+    <rect x="760" y="24" width="125" height="28" rx="6" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" />
+    <text x="772" y="42" class="badge-txt">Zero Credential Leak</text>
+
+    <rect x="895" y="24" width="135" height="28" rx="6" fill="#047857" fill-opacity="0.25" stroke="#34d399" />
+    <text x="905" y="42" class="badge-txt" fill="#34d399">HTTPS / Local Stream</text>
+
+    <rect x="1040" y="24" width="130" height="28" rx="6" fill="#7e22ce" fill-opacity="0.25" stroke="#c084fc" />
+    <text x="1050" y="42" class="badge-txt" fill="#c084fc">O(1) GUI &amp; Rules</text>
+  </g>
+
+  <!-- Layer 1: Entry Point (main.py) -->
+  <g transform="translate(390, 140)">
+    <rect x="0" y="0" width="540" height="115" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)" />
+    <rect x="20" y="16" width="70" height="22" rx="4" fill="#0284c7" />
+    <text x="32" y="31" class="tag-txt" fill="#ffffff">ENTRY</text>
+    <text x="100" y="33" class="card-title" fill="#f8fafc">main.py (Unified CLI &amp; GUI Dispatcher)</text>
+    <text x="25" y="60" class="item-txt">• Auto-Detect OS: <tspan class="bold-txt">platform.system()</tspan> routes --audit to Linux or Windows</text>
+    <text x="25" y="78" class="item-txt">• Strict Validation: Flags conflicting options, unwritable paths, enforces HTTPS</text>
+    <text x="25" y="96" class="item-txt">• Sources &amp; Reports: Configures <tspan class="bold-txt">source_plugin.py</tspan> and invokes <tspan class="bold-txt">report_exporter.py</tspan></text>
+  </g>
+
+  <!-- Connectors from main.py down to the 3 modules -->
+  <!-- Left to Linux -->
+  <path d="M 460 255 L 460 290 L 245 290 L 245 325" stroke="#fb923c" class="arrow" marker-end="url(#arrow-orange)" />
+  <!-- Center to Windows -->
+  <path d="M 660 255 L 660 325" stroke="#38bdf8" class="arrow" marker-end="url(#arrow-blue)" />
+  <!-- Right to GUI -->
+  <path d="M 860 255 L 860 290 L 1075 290 L 1075 325" stroke="#c084fc" class="arrow" marker-end="url(#arrow-purple)" />
+
+  <!-- Layer 2: 3 Core Execution Modules -->
+  <!-- Card 1: linux_auditor.py -->
+  <g transform="translate(60, 325)">
+    <rect x="0" y="0" width="370" height="235" rx="12" fill="#1e293b" stroke="#fb923c" stroke-width="1.8" filter="url(#shadow)" />
+    <rect x="18" y="16" width="60" height="20" rx="4" fill="#c2410c" />
+    <text x="26" y="30" class="tag-txt" fill="#ffffff">LINUX</text>
+    <text x="88" y="31" class="card-title" fill="#fed7aa">linux_auditor.py</text>
+    <text x="20" y="55" class="card-subtitle">Local /etc/shadow Defensive Auditor</text>
+    
+    <line x1="20" y1="65" x2="350" y2="65" stroke="#334155" stroke-width="1" />
+
+    <text x="20" y="88" class="item-txt">• <tspan class="bold-txt">Privilege Check:</tspan> os.geteuid() == 0 (sudo)</text>
+    <text x="20" y="110" class="item-txt">• <tspan class="bold-txt">System libcrypt:</tspan> 64-bit ctypes CDLL binding</text>
+    <text x="20" y="132" class="item-txt">• <tspan class="bold-txt">Algos:</tspan> yescrypt ($y$), SHA-512 ($6$), SHA-256 ($5$)</text>
+    <text x="20" y="154" class="item-txt">• <tspan class="bold-txt">Parallel:</tspan> ProcessPoolExecutor (Multi-Core)</text>
+    <text x="20" y="176" class="item-txt">• <tspan class="bold-txt">Online Pre-fetch:</tspan> Streams once, shares with workers</text>
+    <text x="20" y="198" class="item-txt">• <tspan class="bold-txt">Early Exit:</tspan> break immediately upon first match</text>
+    <text x="20" y="218" class="item-txt" fill="#fdba74">Result: [Username, Algorithm, Status]</text>
+  </g>
+
+  <!-- Card 2: windows_auditor.py -->
+  <g transform="translate(475, 325)">
+    <rect x="0" y="0" width="370" height="235" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8" filter="url(#shadow)" />
+    <rect x="18" y="16" width="75" height="20" rx="4" fill="#0369a1" />
+    <text x="25" y="30" class="tag-txt" fill="#ffffff">WINDOWS</text>
+    <text x="103" y="31" class="card-title" fill="#bae6fd">windows_auditor.py</text>
+    <text x="20" y="55" class="card-subtitle">Local SAM &amp; SYSTEM Hive Auditor</text>
+
+    <line x1="20" y1="65" x2="350" y2="65" stroke="#334155" stroke-width="1" />
+
+    <text x="20" y="88" class="item-txt">• <tspan class="bold-txt">Privilege Check:</tspan> IsUserAnAdmin() (Admin)</text>
+    <text x="20" y="110" class="item-txt">• <tspan class="bold-txt">Safe Extraction:</tspan> reg save to tempfile directory</text>
+    <text x="20" y="132" class="item-txt">• <tspan class="bold-txt">Guaranteed Wipe:</tspan> Hives unlinked in finally block</text>
+    <text x="20" y="154" class="item-txt">• <tspan class="bold-txt">Impacket In-Memory:</tspan> LocalOperations &amp; SAMHashes</text>
+    <text x="20" y="176" class="item-txt">• <tspan class="bold-txt">PyCryptodome MD4:</tspan> UTF-16LE (OpenSSL 3 Safe)</text>
+    <text x="20" y="198" class="item-txt">• <tspan class="bold-txt">Empty Password:</tspan> Detected as Weak / Empty Password</text>
+    <text x="20" y="218" class="item-txt" fill="#7dd3fc">Result: [Username, Algorithm=NTLM, Status]</text>
+  </g>
+
+  <!-- Card 3: gui_checker.py -->
+  <g transform="translate(890, 325)">
+    <rect x="0" y="0" width="370" height="235" rx="12" fill="#1e293b" stroke="#c084fc" stroke-width="1.8" filter="url(#shadow)" />
+    <rect x="18" y="16" width="60" height="20" rx="4" fill="#7e22ce" />
+    <text x="28" y="30" class="tag-txt" fill="#ffffff">GUI</text>
+    <text x="88" y="31" class="card-title" fill="#e9d5ff">gui_checker.py</text>
+    <text x="20" y="55" class="card-subtitle">Interactive Checker &amp; Policy Panel</text>
+
+    <line x1="20" y1="65" x2="350" y2="65" stroke="#334155" stroke-width="1" />
+
+    <text x="20" y="88" class="item-txt">• <tspan class="bold-txt">Framework:</tspan> Built-in tkinter desktop UI</text>
+    <text x="20" y="110" class="item-txt">• <tspan class="bold-txt">Input:</tspan> Masked password entry (show="*")</text>
+    <text x="20" y="132" class="item-txt">• <tspan class="bold-txt">Instant Lookup:</tspan> O(1) set membership evaluation</text>
+    <text x="20" y="154" class="item-txt">• <tspan class="bold-txt">Policy Rules Panel:</tspan> Length &gt;= 12, Upper, Lower, Digit, Sym</text>
+    <text x="20" y="176" class="item-txt">• <tspan class="bold-txt">Real-Time Badges:</tspan> Dynamic ✓ / ✗ visual indicator</text>
+    <text x="20" y="198" class="item-txt">• <tspan class="bold-txt">Zero Logging:</tspan> Transient evaluation, memory wipe</text>
+    <text x="20" y="218" class="item-txt" fill="#d8b4fe">Action: Real-time KeyRelease &amp; Check Button</text>
+  </g>
+
+  <!-- Connectors to Wordlist & Source Engine -->
+  <path d="M 245 560 L 245 600 L 450 600 L 450 640" stroke="#34d399" class="arrow" marker-end="url(#arrow-green)" />
+  <path d="M 660 560 L 660 640" stroke="#34d399" class="arrow" marker-end="url(#arrow-green)" />
+  <path d="M 1075 560 L 1075 600 L 870 600 L 870 640" stroke="#34d399" class="arrow" marker-end="url(#arrow-green)" />
+
+  <!-- Connector from main.py directly to Report Exporter -->
+  <path d="M 930 195 L 1200 195 L 1200 640" stroke="#10b981" class="arrow" marker-end="url(#arrow-green)" />
+
+  <!-- Layer 3: Pluggable Source Engine & Wordlist Core -->
+  <g transform="translate(230, 640)">
+    <rect x="0" y="0" width="860" height="180" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2" filter="url(#shadow)" />
+    <rect x="24" y="16" width="60" height="22" rx="4" fill="#059669" />
+    <text x="34" y="32" class="tag-txt" fill="#ffffff">CORE</text>
+    <text x="96" y="33" class="card-title" fill="#a7f3d0">source_plugin.py &amp; wordlist_engine.py (Pluggable Wordlist Engine)</text>
+    
+    <!-- Left Column: Local Streaming -->
+    <rect x="24" y="52" width="255" height="110" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="36" y="74" class="tag-txt" fill="#34d399">LOCAL FILE STREAMING (-w / -p)</text>
+    <text x="36" y="94" class="item-txt">• stream_wordlist(filepath)</text>
+    <text x="36" y="112" class="item-txt">• 0% RAM buffer overhead generator</text>
+    <text x="36" y="130" class="item-txt">• Strips whitespace &amp; blanks</text>
+    <text x="36" y="148" class="item-txt">• Supports --limit &lt;N&gt; threshold</text>
+
+    <!-- Center Column: Online HTTPS Streaming -->
+    <rect x="300" y="52" width="260" height="110" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="312" y="74" class="tag-txt" fill="#38bdf8">HTTPS ONLINE STREAMING (-i / -u)</text>
+    <text x="312" y="94" class="item-txt">• stream_candidates(config)</text>
+    <text x="312" y="112" class="item-txt">• Standard library urllib (timeout 15s)</text>
+    <text x="312" y="130" class="item-txt">• Transparent .gz on-the-fly decompress</text>
+    <text x="312" y="148" class="item-txt">• Rejects HTML web pages (GitHub/raw)</text>
+
+    <!-- Right Column: Set Mode & Memory Hygiene -->
+    <rect x="580" y="52" width="255" height="110" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="592" y="74" class="tag-txt" fill="#c084fc">SET LOOKUP &amp; BUFFER HYGIENE</text>
+    <text x="592" y="94" class="item-txt">• load_candidates_set(config)</text>
+    <text x="592" y="112" class="item-txt">• Normalized lowercased in-memory set</text>
+    <text x="592" y="130" class="item-txt">• secure_wipe_buffer(bytearray)</text>
+    <text x="592" y="148" class="item-txt">• Single post-audit gc.collect() sweep</text>
+  </g>
+
+  <!-- Left Side: Source Options Box -->
+  <g transform="translate(45, 640)">
+    <rect x="0" y="0" width="160" height="180" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)" />
+    <text x="24" y="30" class="tag-txt" fill="#94a3b8">SOURCE OPTIONS</text>
+    <text x="18" y="55" class="card-title" fill="#f8fafc" font-size="13px">Wordlist Inputs</text>
+    <text x="14" y="78" class="item-txt" font-size="10px">• Local .txt files</text>
+    <text x="14" y="96" class="item-txt" font-size="10px">• HTTPS URLs</text>
+    <text x="14" y="114" class="item-txt" font-size="10px">• .gz Gzip archives</text>
+    <text x="14" y="132" class="item-txt" font-size="10px">• SecLists / RockYou</text>
+    <text x="14" y="150" class="item-txt" font-size="10px">• Configurable limit</text>
+  </g>
+  <path d="M 205 730 L 230 730" stroke="#64748b" stroke-width="2" marker-end="url(#arrow-blue)" />
+
+  <!-- Right Side: Safe Report Exporter -->
+  <g transform="translate(1115, 640)">
+    <rect x="0" y="0" width="165" height="180" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)" />
+    <text x="22" y="30" class="tag-txt" fill="#34d399">REPORT EXPORTER</text>
+    <text x="16" y="55" class="card-title" fill="#f8fafc" font-size="13px">report_exporter.py</text>
+    <text x="14" y="78" class="item-txt" font-size="10px" fill="#34d399">• Pre-flight Path Check</text>
+    <text x="14" y="96" class="item-txt" font-size="10px">• TXT Table Format</text>
+    <text x="14" y="114" class="item-txt" font-size="10px">• CSV Export</text>
+    <text x="14" y="132" class="item-txt" font-size="10px">• Structured JSON</text>
+    <text x="14" y="150" class="item-txt" font-size="10px">• Zero Password Leak</text>
+  </g>
+</svg>
